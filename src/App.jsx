@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <>
-      <Nav user={user} handleLogOut={handleLogOut} />
+      {user && <Nav user={user} handleLogOut={handleLogOut} />}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />

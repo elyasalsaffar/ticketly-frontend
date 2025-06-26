@@ -6,7 +6,8 @@ const Nav = ({ user, handleLogOut }) => {
   if (user) {
     userOptions = (
       <nav>
-        <h3>Welcome {user.name}!</h3>
+        <h3>Welcome {user.first} {user.last}!</h3>
+        <Link to='/ticketing'>Ticketing</Link>
         <Link onClick={handleLogOut} to="/">
           Sign Out
         </Link>
@@ -19,15 +20,11 @@ const Nav = ({ user, handleLogOut }) => {
       <Link to="/">Home</Link>
       <Link to="/register">Register</Link>
       <Link to="/signin">Sign In</Link>
-      <Link to="/ticketing">Ticketing</Link>
     </nav>
   )
 
   return (
     <header>
-      <Link to="/">
-        {/* <img className="logo" src="/images/logo.png" alt="logo" /> */}
-      </Link>
       {user ? userOptions : publicOptions}
     </header>
   )

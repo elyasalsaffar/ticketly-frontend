@@ -6,10 +6,12 @@ const Register = () => {
   let navigate = useNavigate()
 
   const initialState = {
-    name: '',
+    first: '',
+    last: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    phone: ''
   }
 
   const [formValues, setFormValues] = useState(initialState)
@@ -21,9 +23,11 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     await RegisterUser({
-      name: formValues.name,
+      first: formValues.first,
+      last: formValues.last,
       email: formValues.email,
-      password: formValues.password
+      password: formValues.password,
+      phone: formValues.phone
     })
     setFormValues(initialState)
     navigate('/signin')
@@ -33,15 +37,24 @@ const Register = () => {
     <div className="col register">
       <form onSubmit={handleSubmit}>
         <div className="input-wrapper">
-          <label htmlFor="name">Name</label>
+          <label htmlFor="first">First Name</label>
           <input
             onChange={handleChange}
-            id="name"
+            id="first"
             type="text"
             placeholder="John Doe"
-            value={formValues.name}
+            value={formValues.first}
             required
-            autoComplete="name"
+          />
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="last">Last Name</label>
+          <input
+            onChange={handleChange}
+            id="last"
+            type="text"
+            value={formValues.last}
+            required
           />
         </div>
         <div className="input-wrapper">
@@ -54,6 +67,16 @@ const Register = () => {
             value={formValues.email}
             required
             autoComplete="email"
+          />
+        </div>
+        <div className="input-wrapper">
+          <label htmlFor="phone">Phone</label>
+          <input
+            onChange={handleChange}
+            id="phone"
+            type="tel"
+            value={formValues.phone}
+            required
           />
         </div>
         <div className="input-wrapper">
@@ -78,8 +101,10 @@ const Register = () => {
         </div>
         <button
          disabled={
-            !formValues.name ||
+            !formValues.first ||
+            !formValues.last ||
             !formValues.email ||
+            !formValues.phone ||
             !formValues.password ||
             formValues.password !== formValues.confirmPassword
          }
@@ -87,6 +112,10 @@ const Register = () => {
 
           Register
         </button>
+        <p>
+            Already have an account?{' '}
+            <a href="/signin">Sign in here</a>
+        </p>
       </form>
     </div>
   )
