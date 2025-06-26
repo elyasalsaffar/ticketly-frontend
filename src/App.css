@@ -69,3 +69,58 @@ button:disabled {
 button:not(:disabled):hover {
   background-color: #0056b3;
 }
+
+.sidebar-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: #222;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.sidebar-nav .user-greeting {
+  margin-bottom: 2rem;
+}
+
+.sidebar-nav nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.sidebar-nav nav ul li {
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-nav nav ul li a,
+.sidebar-nav nav ul li button {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.sidebar-nav nav ul li a.active-link {
+  color: #00aced;
+  font-weight: 700;
+}
+
+.logout-button {
+  margin-top: auto;
+  cursor: pointer;
+  color: #f44336;
+  font-weight: bold;
+  background: none;
+  border: none;
+  font-size: 1rem;
+}

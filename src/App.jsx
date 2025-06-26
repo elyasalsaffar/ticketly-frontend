@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Ticketing from './pages/Ticketing'
 import { CheckSession } from './services/Auth'
 import { useEffect } from 'react'
+import SidebarNav from './components/SidebarNav'
 import './App.css'
 
 const App = () => {
@@ -32,10 +33,10 @@ const App = () => {
 
   return (
     <>
-      {user && <Nav user={user} handleLogOut={handleLogOut} />}
+      {user && <SidebarNav user={user} handleLogOut={handleLogOut} />}
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home user={user} />} />
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/ticketing" element={<Ticketing />} />
