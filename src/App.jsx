@@ -5,6 +5,7 @@ import Register from './pages/Register'
 import SignIn from './pages/SignIn'
 import Home from './pages/Home'
 import Ticketing from './pages/Ticketing'
+import Profile from './pages/Profile'
 import { CheckSession } from './services/Auth'
 import { useEffect } from 'react'
 import SidebarNav from './components/SidebarNav'
@@ -20,8 +21,13 @@ const App = () => {
   }
 
   const checkToken = async () => {
-    const user = await CheckSession()
-    setUser(user)
+    try {
+      const user = await CheckSession()
+      setUser(user)
+    } catch (error) {
+      console.error('Session check failed:', error)
+      localStorage.removeItem('token')
+    }
   }
 
   useEffect(() => {
@@ -40,6 +46,7 @@ const App = () => {
           <Route path="/signin" element={<SignIn setUser={setUser} />} />
           <Route path="/register" element={<Register />} />
           <Route path="/ticketing" element={<Ticketing />} />
+          <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
         </Routes>
       </main>
     </>

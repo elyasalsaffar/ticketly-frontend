@@ -19,6 +19,11 @@ const SidebarNav = ({ user, handleLogOut }) => {
                         Submit Ticket
                     </NavLink>
                 </li>
+                 <li>
+                    <NavLink to='/profile' className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                        Profile
+                    </NavLink>
+                </li>
                 {user.role === 'admin' && (
                     <>
                     <li>
