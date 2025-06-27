@@ -87,7 +87,7 @@ const Register = () => {
     <div className="col register">
       <form onSubmit={handleSubmit}>
         {apiError && <p style={{ color: 'red' }}>{apiError}</p>}
-        
+
         <div className="input-wrapper">
           <label htmlFor="first">First Name</label>
           <input
