@@ -10,6 +10,7 @@ import { CheckSession } from './services/Auth'
 import { useEffect } from 'react'
 import SidebarNav from './components/SidebarNav'
 import './App.css'
+import UserManagement from './pages/UserManagement'
 
 const App = () => {
 
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="/register" element={<Register />} />
           <Route path="/ticketing" element={<Ticketing />} />
           <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
+          <Route path="/admin/users" element={<UserManagement />} />
         </Routes>
       </main>
     </>
