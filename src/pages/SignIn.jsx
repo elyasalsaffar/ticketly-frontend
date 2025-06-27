@@ -38,7 +38,7 @@ const SignIn = ({ setUser }) => {
 
   return (
     <div className="col signin">
-      <form className="col" onSubmit={handleSubmit}>
+      <form className="col auth-form" onSubmit={handleSubmit}>
         {error && <p style={{ color: 'red' }}>{error}</p>}
 
         <div className="input-wrapper">

@@ -127,10 +127,10 @@ const handleCancel = () => {
     return (
         <div className="profile-page">
             <div className="profile">
-            <h2>Hello, {user.first}!</h2>
 
             {!editing && (
                 <>
+                <h2>Hello, {user.first}!</h2>
                 <div className="profile-header">
                 <img src={user.profilePicture || 'https://via.placeholder.com/150'} alt="Profile" className="profile-picture" />
                 <div className="profile-details">
@@ -148,7 +148,9 @@ const handleCancel = () => {
                 </>
             )}
 
-      {editing && (            
+      {editing && (   
+        <>
+        <h2 style={{ textAlign: 'center' }}>Editing {user.first}'s Profile</h2>         
       <form onSubmit={handleSubmit}>
         {['first', 'last', 'email', 'phone'].map((field) => (
             <div className="input-wrapper" key={field}>
@@ -161,6 +163,7 @@ const handleCancel = () => {
                   />
                   {errors[field] && <span style={{ color: 'red' }}>{errors[field]}</span>}
             </div>
+            
         ))}
 
         <div className="input-wrapper">
@@ -200,11 +203,13 @@ const handleCancel = () => {
           <button type="button" onClick={handleCancel} className="profile-cancel-btn">Cancel</button>
         </div>
         </form>
+        </>
     )}
 
     {message && <p style={{ color: 'green' }}>{message}</p>}
     </div>
     </div>
+    
     )
 }
 

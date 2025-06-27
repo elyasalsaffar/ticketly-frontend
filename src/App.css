@@ -23,7 +23,7 @@ p {
   min-height: 100vh;
 }
 
-form {
+.auth-form {
   background-color: white;
   padding: 2rem;
   border-radius: 8px;
@@ -186,6 +186,7 @@ button:not(:disabled):hover {
 
 .profile form {
   margin-top: 20px;
+  width: 400px;
 }
 
 .profile h2 {
