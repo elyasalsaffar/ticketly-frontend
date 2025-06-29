@@ -11,6 +11,7 @@ import { useEffect } from 'react'
 import SidebarNav from './components/SidebarNav'
 import './App.css'
 import UserManagement from './pages/UserManagement'
+import SubmitTicket from './pages/SubmitTicket'
 
 const App = () => {
 
@@ -49,6 +50,7 @@ const App = () => {
           <Route path="/ticketing" element={<Ticketing />} />
           <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
           <Route path="/admin/users" element={<UserManagement />} />
+          <Route path="/submit-ticket" element={<SubmitTicket />} />
         </Routes>
       </main>
     </>
