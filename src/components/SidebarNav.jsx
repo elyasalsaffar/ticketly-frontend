@@ -36,9 +36,9 @@ const SidebarNav = ({ user, handleLogOut }) => {
                             Tickets Management
                         </NavLink>
                     </li>
-                    <li>
-                        <NavLink to='/admin/notifications' className={({ isActive }) => (isActive ? 'active-link' : '')}>
-                            Notifications
+                      <li>
+                        <NavLink to='/admin/dashboard' className={({ isActive }) => (isActive ? 'active-link' : '')}>
+                            Admin Dashboard
                         </NavLink>
                     </li>
                     </>
