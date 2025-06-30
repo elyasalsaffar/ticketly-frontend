@@ -1,8 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from "axios"
-
-
 const SubmitTicket = () => {
     const navigate = useNavigate();
     const initialState = {
@@ -11,38 +9,31 @@ const SubmitTicket = () => {
         department: "inquiry",
         priority: "medium",
     }
-
     const [ formState , setFormState ] = useState(initialState)
-
-
     const handleChange = (event) => {
         setFormState({...formState, [event.target.name] : event.target.value})
-    } 
-
+    }
     const handleSubmit = async (event) => {
         event.preventDefault()
-        
         try {
             const token = localStorage.getItem('token')
-            await axios.post('http://localhost:3001/issues', formState, 
+            await axios.post('http://localhost:3001/tickets', formState,
             {
                 headers: {
-                    Authorization: `Berear ${token}`
+                    Authorization: `Bearer ${token}`
                 }
             })
-
             setFormState(initialState)
             getIssue()
-
         } catch (error) {
             console.log(error)
         }
-        
 }
 
 return (
 
-    <div style={{ maxWidth: "600px", margin: "40px auto" }}>
+    <div className="submit-form-container">
+        
       <h2>Submit a New Ticket</h2>
     <form 
     onSubmit={handleSubmit}>
@@ -94,7 +85,7 @@ return (
             >
             <option value="low ">Low </option>
             <option value="medium ">Medium </option>
-            <option value="high ">Software </option>
+            <option value="high ">Very important </option>
             </select>
         </div>
 
@@ -104,7 +95,9 @@ return (
 
 
     </form>
-    </div>
+
+        
+ </div>
 
 ) }
 
