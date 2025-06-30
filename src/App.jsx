@@ -12,6 +12,8 @@ import SidebarNav from './components/SidebarNav'
 import './App.css'
 import UserManagement from './pages/UserManagement'
 import SubmitTicket from './pages/SubmitTicket'
+import AdminDashboard from './pages/AdminDashboard'
+import AdminTicketList from './pages/AdminTicketList'
 
 const App = () => {
 
@@ -50,6 +52,8 @@ const App = () => {
           <Route path="/ticketing" element={<Ticketing />} />
           <Route path="/profile" element={<Profile user={user} setUser={setUser} />} />
           <Route path="/admin/users" element={<UserManagement />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/tickets" element={<AdminTicketList />} />
           <Route path="/submit-ticket" element={<SubmitTicket />} />
         </Routes>
       </main>

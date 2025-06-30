@@ -132,7 +132,7 @@ const handleCancel = () => {
                 <>
                 <h2>Hello, {user.first}!</h2>
                 <div className="profile-header">
-                <img src={user.profilePicture || 'https://via.placeholder.com/150'} alt="Profile" className="profile-picture" />
+                <img src={user.profilePicture || 'https://www.gravatar.com/avatar/?d=mp'} alt="Profile" className="profile-picture" />
                 <div className="profile-details">
                 <p><strong>First Name:</strong> {user.first}</p>
                 <p><strong>Last Name:</strong> {user.last}</p>
