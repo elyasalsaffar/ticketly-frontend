@@ -8,7 +8,7 @@ const TicketList = () => {
   useEffect(() => {
     const fetchTickets = async () => {
       try {
-        const res = await axios.get('/tickets')
+        const res = await axios.get('/ticketList')
         setTickets(res.data)
       } catch (err) {
         console.error(err)
