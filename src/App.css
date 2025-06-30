@@ -373,3 +373,54 @@ input {
   flex-direction: column;
   gap: 6px;
 }
+
+.submit-form-container {
+  max-width: 500px;
+  margin: 30px auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: sans-serif;
+}
+
+.submit-form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.submit-form-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 14px;
+}
+
+.submit-form-container input,
+.submit-form-container textarea,
+.submit-form-container select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.submit-form-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #999;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submit-form-container button:hover {
+  background-color: #777;
+}
