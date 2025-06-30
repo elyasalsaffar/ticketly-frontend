@@ -16,22 +16,35 @@ const SubmitTicket = () => {
 
 
     const handleChange = (event) => {
-        setFormState({...formState, [event.target.id] : event.target.value})
+        setFormState({...formState, [event.target.name] : event.target.value})
     } 
 
     const handleSubmit = async (event) => {
-        event.preventDefault();
-        await axios.post('http://localhost:3001/issues', formState)
-        setFormState(initialState)
-        getIssue()
-        navigate("/tickets") // 
-}
+        event.preventDefault()
+        
+        try {
+            const token = localStorage.getItem('token')
+            await axios.post('http://localhost:3001/issues', formState, 
+            {
+                headers: {
+                    Authorization: `Berear ${token}`
+                }
+            })
 
+            setFormState(initialState)
+            getIssue()
+
+        } catch (error) {
+            console.log(error)
+        }
+        
+}
 
 return (
 
+    <div style={{ maxWidth: "600px", margin: "40px auto" }}>
+      <h2>Submit a New Ticket</h2>
     <form 
-
     onSubmit={handleSubmit}>
         <div>
             <label>Title:</label>
@@ -46,13 +59,13 @@ return (
 
         <div>
             <label> Decription: </label>
-            <texterea 
+            <textarea 
             name= "description"
             value= {formState.description}
             onChange={handleChange}
             rows="6"
             required
-            />
+            ></textarea>
 
         </div>
 
@@ -91,6 +104,7 @@ return (
 
 
     </form>
+    </div>
 
 ) }
 
