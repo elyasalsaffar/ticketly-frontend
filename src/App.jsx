@@ -14,6 +14,8 @@ import UserManagement from './pages/UserManagement'
 import SubmitTicket from './pages/SubmitTicket'
 import AdminDashboard from './pages/AdminDashboard'
 import AdminTicketList from './pages/AdminTicketList'
+import TicketList from './pages/TicketList'
+import TicketDetails from './pages/TicketDetails'
 
 const App = () => {
 
@@ -55,6 +57,8 @@ const App = () => {
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/tickets" element={<AdminTicketList />} />
           <Route path="/create-ticket" element={<SubmitTicket />} />
+          <Route path="/ticketList" element={<TicketList user={user} />} />
+          <Route path="/tickets/:id" element={<TicketDetails />} />
         </Routes>
       </main>
     </>
