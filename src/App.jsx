@@ -57,7 +57,7 @@ const App = () => {
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
           <Route path="/admin/tickets" element={<AdminTicketList />} />
           <Route path="/create-ticket" element={<SubmitTicket />} />
-          <Route path="/ticketList" element={<TicketList user={user} />} />
+          <Route path="/ticketsList" element={<TicketList user={user} />} />
           <Route path="/tickets/:id" element={<TicketDetails />} />
         </Routes>
       </main>

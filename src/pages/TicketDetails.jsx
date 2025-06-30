@@ -5,27 +5,47 @@ import { useParams, Link } from 'react-router-dom'
 const TicketDetails = () => {
   const { id } = useParams()
   const [ticket, setTicket] = useState(null)
+  const [notes, setNotes] = useState([])
 
   useEffect(() => {
-    // Fetch ticket details from API based on ticket ID
     const fetchTicket = async () => {
       try {
-        const res = await axios.get(`/tickets/${id}`)
+        const token = localStorage.getItem('token')
+        const res = await axios.get(`http://localhost:3001/tickets/${id}`, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
         setTicket(res.data)
+        fetchNotes(res.data._id)
       } catch (err) {
-        console.error(err)
+        console.error('Error fetching ticket details:', err)
       }
     }
     fetchTicket()
   }, [id])
 
+  const fetchNotes = async (ticketId) => {
+    try {
+      const token = localStorage.getItem('token')
+      const res = await axios.get(`http://localhost:3001/notes/${ticketId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      })
+      setNotes(res.data)
+    } catch (err) {
+      console.error('Error fetching notes:', err)
+    }
+  }
+
   // Show loading state while fetching data
   if (!ticket) return <div>Loading...</div>
 
   return (
-    <div>
+    <div className='ticket-details'>
       <h2>Ticket Details</h2>
-      <table border="1" cellPadding="8" cellSpacing="0">
+      <table className='ticket-table'>
         <tbody>
           <tr>
             <th>Title</th>
@@ -56,10 +76,23 @@ const TicketDetails = () => {
             <td>{ticket.attachment ? ticket.attachment : 'None'}</td>
           </tr>
         </tbody>
+
+        <h3 style={{ paddingLeft: '10px' }}>Admin Notes</h3>
+      {notes.length > 0 ? (
+        <ul>
+          {notes.map(note => (
+            <li key={note._id}>
+              <strong>{note.user.first}:</strong> {note.content}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No admin notes available.</p>
+      )}
+
       </table>
       <div style={{ marginTop: '20px' }}>
-        {/* Link to go back to the ticket list */}
-        <Link to="/">Back to list</Link>
+        <Link to="/ticketsList" className="back-link">Back to list</Link>
       </div>
     </div>
   )

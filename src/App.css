@@ -424,3 +424,48 @@ input {
 .submit-form-container button:hover {
   background-color: #777;
 }
+
+.ticket-table a {
+  color: #007bff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.ticket-table a:hover {
+  text-decoration: underline;
+}
+
+.ticket-details {
+  margin-left: 200px;
+  padding: 30px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.ticket-table th,
+.ticket-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.ticket-table th {
+  background-color: #f4f4f4;
+  text-align: left;
+}
+
+.back-link {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
