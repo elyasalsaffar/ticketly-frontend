@@ -127,7 +127,7 @@ const AdminTicketList = () => {
             </table>
           )}
             {selectedTicket && (
-                <div className="ticket-details">
+                <div className="ticket-details-admin">
                     <h3>Ticket Details</h3>
                     <p><strong>Title:</strong> {selectedTicket.title}</p>
                     <p><strong>Description:</strong> {selectedTicket.description}</p>

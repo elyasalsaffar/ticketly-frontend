@@ -8,6 +8,7 @@ import Ticketing from './pages/Ticketing'
 import Profile from './pages/Profile'
 import { CheckSession } from './services/Auth'
 import { useEffect } from 'react'
+import { useLocation } from 'react-router'
 import SidebarNav from './components/SidebarNav'
 import './App.css'
 import UserManagement from './pages/UserManagement'
@@ -20,6 +21,9 @@ import TicketDetails from './pages/TicketDetails'
 const App = () => {
 
   const [user, setUser] = useState(null)
+
+  const location = useLocation()
+  const hideSidebar = location.pathname === '/signin' || location.pathname === '/register'
 
   const handleLogOut = () => {
     setUser(null)
@@ -45,7 +49,8 @@ const App = () => {
 
   return (
     <>
-      {user && <SidebarNav user={user} handleLogOut={handleLogOut} />}
+      {user && !hideSidebar && <SidebarNav user={user} handleLogOut={handleLogOut} />}
+      <div className={`main-wrapper ${user && !hideSidebar ? 'with-sidebar' : 'full-page'}`}>
       <main>
         <Routes>
           <Route path="/" element={<Home user={user} />} />
@@ -61,6 +66,7 @@ const App = () => {
           <Route path="/tickets/:id" element={<TicketDetails />} />
         </Routes>
       </main>
+      </div>
     </>
   )
 }

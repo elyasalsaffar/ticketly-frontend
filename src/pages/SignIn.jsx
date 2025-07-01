@@ -37,8 +37,9 @@ const SignIn = ({ setUser }) => {
   }
 
   return (
-    <div className="col signin">
-      <form className="col auth-form" onSubmit={handleSubmit}>
+    <div className="page-wrapper">
+      <form className="card auth-form" onSubmit={handleSubmit}>
+        <h2>Sign In to Continue</h2>
         {error && <p style={{ color: 'red' }}>{error}</p>}
 
         <div className="input-wrapper">
@@ -47,7 +48,6 @@ const SignIn = ({ setUser }) => {
             onChange={handleChange}
             id="email"
             type="email"
-            placeholder="example@example.com"
             value={formValues.email}
             required
             autoComplete="email"

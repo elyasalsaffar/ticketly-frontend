@@ -84,8 +84,9 @@ const Register = () => {
   }
 
   return (
-    <div className="col register">
-      <form className='auth-form' onSubmit={handleSubmit}>
+    <div className="page-wrapper">
+      <form className='card auth-form' onSubmit={handleSubmit}>
+        <h2>Create an Account</h2>
         {apiError && <p style={{ color: 'red' }}>{apiError}</p>}
 
         <div className="input-wrapper">
@@ -116,7 +117,6 @@ const Register = () => {
             onChange={handleChange}
             id="email"
             type="email"
-            placeholder="example@example.com"
             value={formValues.email}
             required
             autoComplete="email"
