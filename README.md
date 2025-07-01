@@ -1,4 +1,4 @@
-# ticketly-frontend
+# ticketly-backend
 
 ---
 
@@ -10,33 +10,40 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 
 ## 📸 Screenshots
 
-### 🖥️ Home Page
-![Home Page](./screenshots/homepage.png)
+---
 
-### 🧾 Submit Ticket
-![Submit Ticket](./screenshots/submit-ticket.png)
-
-### 📂 My Tickets View
-![My Tickets](./screenshots/my-tickets.png)
-
-### 📋 Admin Dashboard
-![Admin Dashboard](./screenshots/admin-dashboard.png)
-
-### 📝 Ticket Details
-![Ticket Details](./screenshots/Ticket-Det.png)
-
-### 👤 Profile User
-![Profile User](./screenshots/Profile-User.png)
-
-### 👥 User Management
-![User Management](./screenshots/User-Managment.png)
+### 🗺️ ERD
+![ERD](screenshots/ERD.jpg)
 
 ### 🗂️ Component Hierarchy Diagram
-![Component Hierarchy Diagram](./screenshots/Component-heirarchy-diagram.png)
+![Component Hierarchy Diagram](screenshots/Component-heirarchy-diagram.png)
+
+### 🖥️ Home Page
+![Home Page](screenshots/homepage.png)
+
+### 🧾 Submit Ticket
+![Submit Ticket](screenshots/submit-ticket.png)
+
+### 📂 My Tickets View
+![My Tickets](screenshots/my-tickets.png)
+
+### 📋 Admin Dashboard
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+### 📝 Ticket Details
+![Ticket Details](screenshots/Ticket-Details.png)
+
+### 👤 Profile User
+![Profile User](screenshots/Profile-User.png)
+
+### 👥 User Management
+![User Management](screenshots/User-Managment.png)
 
 ---
 
 ## 📦 Features
+
+---
 
 ### 👤 User Features:
 - 📝 Register and log in securely (JWT Authentication)
@@ -54,6 +61,8 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 ---
 
 ## 📌 Technologies Used
+
+---
 
 ### 🖥️ Frontend:
 - React.js 
@@ -109,6 +118,7 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 ---
 
 ### 👥 Team Members
+
 - Elyas Alsafar .
 - Aysha Zayed . 
 - Hasan Juma .
