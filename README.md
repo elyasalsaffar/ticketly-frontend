@@ -1,6 +1,4 @@
-# ticketly-backend
-
-# ticketly-backend
+# ticketly-frontend
 
 ---
 
@@ -12,23 +10,29 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 
 ## 📸 Screenshots
 
-### 🖥️ Home Page  
+### 🖥️ Home Page
 ![Home Page](./screenshots/homepage.png)
 
-### 🧾 Submit Ticket  
+### 🧾 Submit Ticket
 ![Submit Ticket](./screenshots/submit-ticket.png)
 
-### 📂 My Tickets View  
+### 📂 My Tickets View
 ![My Tickets](./screenshots/my-tickets.png)
 
-### 📋 Admin Dashboard  
+### 📋 Admin Dashboard
 ![Admin Dashboard](./screenshots/admin-dashboard.png)
 
-### 💬 Admin Reply with Notes  
-![Admin Reply](./screenshots/admin-reply.png)
+### 📝 Ticket Details
+![Ticket Details](./screenshots/Ticket-Det.png)
 
-### 📨 Email Notification Example  
-![Email Notification](./screenshots/email-notification.png)
+### 👤 Profile User
+![Profile User](./screenshots/Profile-User.png)
+
+### 👥 User Management
+![User Management](./screenshots/User-Managment.png)
+
+### 🗂️ Component Hierarchy Diagram
+![Component Hierarchy Diagram](./screenshots/Component-heirarchy-diagram.png)
 
 ---
 
@@ -36,21 +40,15 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 
 ### 👤 User Features:
 - 📝 Register and log in securely (JWT Authentication)
-- 📨 Submit support tickets with title, description, category, and optional file attachments
-- 📋 View submitted tickets and their statuses
-- 📧 Receive email notifications when a ticket is updated or replied to
-- 🔁 See the number of replies (notes) on each ticket
+- 📨 Submit support tickets with title, description, category .
+- 📋 View submitted tickets and their statuses .
 
 ### 🛠️ Admin Features:
 - 🔐 Secure login to access admin dashboard
 - 🗃️ View, delete, and update user roles
-- 🕵️ View all tickets with full details and attachments
+- 🕵️ View all tickets with full details . 
 - 💬 Reply to tickets using internal notes
 - 🔄 Change ticket status (e.g., Open, Closed)
-- 📩 Trigger automatic email notifications on updates
-- 📈 See the number of replies per ticket
-- 🗂️ Categorize tickets
-- 📎 Attach files in replies
 - 📊 View system statistics (total tickets, open/closed , total users)
 
 ---
@@ -58,21 +56,21 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 ## 📌 Technologies Used
 
 ### 🖥️ Frontend:
-- React.js ⚛️
-- React Router DOM 🧭
-- Context API 📚
-- Axios 🌐
-- Tailwind CSS 🎨
+- React.js 
+- React Router DOM 
+- Context API 
+- Axios 
+- Tailwind CSS 
 
 
 ### 🔧 Backend:
-- Node.js 🔙
-- Express.js 🚂
-- MongoDB 🍃
-- Mongoose 🧬
-- JWT Authentication 🔐
-- Bcrypt.js 🔒
-- dotenv 🧾
+- Node.js 
+- Express.js 
+- MongoDB 
+- Mongoose 
+- JWT Authentication 
+- Bcrypt.js 
+- dotenv 
 
 ---
 
@@ -83,7 +81,7 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 ### 👥 User Stories (User)
 
 1. 👤 As a user, I want to register and log in so that I can submit and track my support tickets.  
-2. 📨 As a user, I want to submit a support ticket with a title, description, category, and (optional) file attachments to request help.  
+2. 📨 As a user, I want to submit a support ticket with a title, description, category to request help.
 3. 📋 As a user, I want to view all my submitted tickets and their statuses so I can follow up on my requests.  
 4. 📧 As a user, I want to receive email notifications when my ticket gets a reply or its status changes so I stay informed.  
 5. 🔁 As a user, I want to see the number of replies (notes) on each ticket to understand the level of activity.
@@ -94,11 +92,23 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 
 1. 🔐 As an admin, I want to log in securely to access the admin dashboard.  
 2. 🗃️ As an admin, I want to view, delete, and update user roles to manage the system effectively.  
-3. 🕵️ As an admin, I want to view all tickets with details and attachments to monitor and manage user requests.  
+3. 🕵️ As an admin, I want to view all tickets with details to monitor and manage user requests.  
 4. 💬 As an admin, I want to reply to tickets using notes to assist users with their issues.  
 5. 🔄 As an admin, I want to change the status of tickets (e.g., open, closed) to indicate progress.  
-6. 📩 As an admin, I want to trigger automatic email notifications to users when a ticket is updated or replied to.  
-7. 📈 As an admin, I want to see the number of replies (notes) per ticket for better tracking and prioritization.  
-8. 🗂️ As an admin, I want to categorize tickets (optional) to better organize support topics.  
-9.📎 As an admin, I want to attach files in replies (optional) to provide additional resources or information.  
-10. 📊 As an admin, I want to view system statistics (total tickets, total users, open vs. closed tickets) to assess support performance.
+6. 📈 As an admin, I want to see the number of replies (notes) per ticket for better tracking and prioritization.  
+7. 📊 As an admin, I want to view system statistics (total tickets, total users, open vs. closed tickets) to assess support performance.
+
+---
+
+### 🚀 Future Improvements
+
+- Enhance the admin user interface .
+- Send email notifications when a ticket is created or a reply is added .
+- Allow users to interact and add replies .
+
+---
+
+### 👥 Team Members
+- Elyas Alsafar .
+- Aysha Zayed . 
+- Hasan Juma .
