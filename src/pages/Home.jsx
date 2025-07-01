@@ -4,15 +4,18 @@ const Home = ({ user }) => {
   let navigate = useNavigate()
 
   return (
-    <div className="col home">
+    <div className="col home-page">
+        <h1 className='home-title'>Ticketly</h1>
     {!user ? (
-      <section>
-        <button onClick={() => navigate('/register')}>
-          Click Here To Get Started
-        </button>
+      <section className='home-intro'>
+        <h2>Welcome to <strong>Ticketly</strong>, an IT Support Ticket System.</h2>
+        <div className='home-buttons'>
+            <button onClick={() => navigate('/signin')}>Sign In</button>
+            <button onClick={() => navigate('/register')}>Register</button>
+        </div>
       </section>
     ) : (
-        <section>
+        <section className='home-intro'>
             <h2>Welcome back!</h2>
             <p>Use the sidebar to navigate.</p>
         </section>

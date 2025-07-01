@@ -65,7 +65,7 @@ const TicketDetails = () => {
           </tr>
           <tr>
             <th>User</th>
-            <td>{ticket.user}</td>
+            <td>{ticket.user?.first} {ticket.user?.last}</td>
           </tr>
           <tr>
             <th>Department</th>
