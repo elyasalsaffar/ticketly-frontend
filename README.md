@@ -69,7 +69,7 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 - React Router DOM 
 - Context API 
 - Axios 
-- Tailwind CSS 
+- CSS 
 
 
 ### 🔧 Backend:
@@ -106,6 +106,12 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 5. 🔄 As an admin, I want to change the status of tickets (e.g., open, closed) to indicate progress.  
 6. 📈 As an admin, I want to see the number of replies (notes) per ticket for better tracking and prioritization.  
 7. 📊 As an admin, I want to view system statistics (total tickets, total users, open vs. closed tickets) to assess support performance.
+
+---
+
+### 🗂️ Trello Board  
+Track our project's progress and tasks on Trello:  
+🔗 [View Trello Board](https://trello.com/b/dMRBIo3x/it-ticketing-system-project)
 
 ---
 
