@@ -8,6 +8,12 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 
 ---
 
+## 🌐 Live Deployment
+
+You can access the live application here: [Ticketly Frontend](https://ticketly-frontend.surge.sh/)
+
+---
+
 ## 📸 Screenshots
 
 ---
